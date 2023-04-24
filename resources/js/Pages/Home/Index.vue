@@ -4,6 +4,7 @@ import TopNavigation from "@/Components/TopNavigation.vue";
 import TopCalculatorForm from "@/Pages/Home/TopCalculatorForm.vue";
 import AboutMatrix from "@/Pages/Home/AboutMatrix.vue";
 import NeedIf from "@/Pages/Home/NeedIf.vue";
+import WhatSay from "@/Pages/Home/WhatSay.vue";
 
 const windowHeight = window.innerHeight + "px";
 const windowWidth = Math.min(1300, window.innerWidth) + "px";
@@ -18,6 +19,7 @@ const windowWidth = Math.min(1300, window.innerWidth) + "px";
             <TopCalculatorForm />
             <AboutMatrix />
             <NeedIf />
+            <WhatSay />
         </div>
     </div>
 </template>
@@ -38,14 +40,14 @@ const windowWidth = Math.min(1300, window.innerWidth) + "px";
 }
 
 .page-box {
-    padding: 140px 0 20px 40px;
+    padding: 150px 0 20px 40px;
 }
 
 .page-box .box-title {
     font-weight: bold;
     font-size: 50px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .page-box .box-description {

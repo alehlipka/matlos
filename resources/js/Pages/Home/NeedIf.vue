@@ -10,7 +10,7 @@ import need_if_8 from "@/../img/need-if/8.png";
 </script>
 
 <template>
-    <div class="page" id="about-matrix">
+    <div class="page">
         <div class="page-box">
             <div class="box-title">POTRZEBUJESZ MATRYCY JEŚLI:</div>
             <div class="box-description holder">
