@@ -2,10 +2,14 @@
 import { Head } from '@inertiajs/vue3';
 import TopNavigation from "@/Components/TopNavigation.vue";
 import TopCalculatorForm from "@/Pages/Home/TopCalculatorForm.vue";
+import MatrixMap from "@/Pages/Home/MatrixMap.vue";
+import MatrixDemoResult from "@/Pages/Home/MatrixDemoResult.vue";
 import AboutMatrix from "@/Pages/Home/AboutMatrix.vue";
 import NeedIf from "@/Pages/Home/NeedIf.vue";
 import WhatSay from "@/Pages/Home/WhatSay.vue";
 import Price from "@/Pages/Home/Price.vue";
+import Social from "@/Pages/Home/Social.vue";
+import TwoWays from "@/Pages/Home/TwoWays.vue";
 
 const windowHeight = window.innerHeight + "px";
 const windowWidth = Math.min(1300, window.innerWidth) + "px";
@@ -18,18 +22,21 @@ const windowWidth = Math.min(1300, window.innerWidth) + "px";
         <div class="content">
             <TopNavigation />
             <TopCalculatorForm />
+            <MatrixMap />
+            <MatrixDemoResult />
             <AboutMatrix />
             <NeedIf />
             <WhatSay />
             <Price />
+            <Social />
+            <TwoWays />
         </div>
     </div>
 </template>
 
 <style>
 .page {
-    min-height: 700px;
-    height: v-bind(windowHeight);
+    min-height: v-bind(windowHeight);
 }
 
 .container {
