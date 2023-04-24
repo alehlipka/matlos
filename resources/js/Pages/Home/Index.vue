@@ -5,6 +5,7 @@ import TopCalculatorForm from "@/Pages/Home/TopCalculatorForm.vue";
 import AboutMatrix from "@/Pages/Home/AboutMatrix.vue";
 import NeedIf from "@/Pages/Home/NeedIf.vue";
 import WhatSay from "@/Pages/Home/WhatSay.vue";
+import Price from "@/Pages/Home/Price.vue";
 
 const windowHeight = window.innerHeight + "px";
 const windowWidth = Math.min(1300, window.innerWidth) + "px";
@@ -20,6 +21,7 @@ const windowWidth = Math.min(1300, window.innerWidth) + "px";
             <AboutMatrix />
             <NeedIf />
             <WhatSay />
+            <Price />
         </div>
     </div>
 </template>

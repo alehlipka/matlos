@@ -40,9 +40,9 @@ onBeforeUnmount(() => {
         </div>
         <div class="links">
             <div class="group" :class="{fill: logo.filled}">
-                <Link class="link main" href="#top-calculator-form">GŁÓWNA</Link>
-                <Link class="link about" href="#about-matrix">O MATRYCY</Link>
-                <Link class="link buy" href="#buy">KUPIC</Link>
+                <a class="link main" href="#top-calculator-form">GŁÓWNA</a>
+                <a class="link about" href="#about-matrix">O MATRYCY</a>
+                <a class="link buy" href="#buy">KUPIC</a>
             </div>
             <Link class="link profile" href="#account">KONTO</Link>
         </div>
