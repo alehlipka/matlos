@@ -1,4 +1,4 @@
-MatrixDemoResult.vue<template>
+<template>
     <div class="page">
         <div class="page-box">
             <div class="box-description">

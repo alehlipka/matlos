@@ -10,6 +10,7 @@ import WhatSay from "@/Pages/Home/WhatSay.vue";
 import Price from "@/Pages/Home/Price.vue";
 import Social from "@/Pages/Home/Social.vue";
 import TwoWays from "@/Pages/Home/TwoWays.vue";
+import Footer from "@/Pages/Home/Footer.vue";
 
 const windowHeight = window.innerHeight + "px";
 const windowWidth = Math.min(1300, window.innerWidth) + "px";
@@ -21,6 +22,7 @@ const windowWidth = Math.min(1300, window.innerWidth) + "px";
     <div class="container">
         <div class="content">
             <TopNavigation />
+
             <TopCalculatorForm />
             <MatrixMap />
             <MatrixDemoResult />
@@ -30,6 +32,8 @@ const windowWidth = Math.min(1300, window.innerWidth) + "px";
             <Price />
             <Social />
             <TwoWays />
+
+            <Footer />
         </div>
     </div>
 </template>
