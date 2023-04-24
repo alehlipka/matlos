@@ -1,0 +1,69 @@
+.button {
+    border-radius: 200px;
+    text-decoration: none;
+    padding: 14px;
+    border: none;
+    color: #ffffff;
+}
+
+.button.o2b {
+    background: linear-gradient(to right, orange 40%, red);
+}
+.button.o2b:active {
+    background: #270b3e;
+}
+
+.button.b2o {
+    background: #270b3e;
+}
+.button.b2o:active {
+    background: linear-gradient(to right, orange 40%, red);
+}
+
+.button.g2o {
+    background: #cccccc;
+}
+.button.g2o:active {
+    background: linear-gradient(to right, orange 40%, red);
+}
+
+.button.w2g {
+    background: #ffffff;
+    color: #cccccc;
+}
+.button.w2g:active {
+    background: #cccccc;
+    color: #ffffff;
+}
+
+.button.bt2b {
+    background: transparent;
+    border: 2px solid #270b3e;
+    color: #270b3e;
+}
+.button.bt2b:active {
+    background: #270b3e;
+    color: #ffffff;
+}
+
+.button.gt2b {
+    background: transparent;
+    border: 2px solid #cccccc;
+    color: #cccccc;
+}
+.button.gt2b:active {
+    background: #270b3e;
+    border: 2px solid #270b3e;
+    color: #ffffff;
+}
+
+.button.gt2o {
+    background: transparent;
+    border: 2px solid #cccccc;
+    color: #cccccc;
+}
+.button.gt2o:active {
+    background: linear-gradient(to right, orange 40%, red);
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}

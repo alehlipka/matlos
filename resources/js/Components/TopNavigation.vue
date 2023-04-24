@@ -40,11 +40,11 @@ onBeforeUnmount(() => {
         </div>
         <div class="links">
             <div class="group" :class="{fill: logo.filled}">
-                <a class="link main" href="#top-calculator-form">GŁÓWNA</a>
+                <a class="link main" href="/">GŁÓWNA</a>
                 <a class="link about" href="#about-matrix">O MATRYCY</a>
                 <a class="link buy" href="#buy">KUPIC</a>
             </div>
-            <Link class="link profile" href="#account">KONTO</Link>
+            <Link class="link profile button o2b" href="#account">KONTO</Link>
         </div>
     </div>
 </template>
@@ -81,9 +81,7 @@ onBeforeUnmount(() => {
 }
 
 .navigation .link.profile {
-    background: linear-gradient(to right, orange 40%, red);
     padding: 5px 24px;
-    border-radius: 20px;
     margin-right: 0px;
 }
 
