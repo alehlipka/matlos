@@ -3,6 +3,7 @@
     text-decoration: none;
     border: none;
     color: #000000;
+    cursor: pointer;
 }
 
 .input.gt2bt {
@@ -12,4 +13,20 @@
 .input.gt2bt:focus {
     border: 2px solid #270b3e;
     color: #270b3e;
+}
+
+.radio {
+    border-radius: 200px;
+    text-decoration: none;
+    padding: 14px;
+    background: transparent;
+    border: 2px solid #cccccc;
+    color: #cccccc;
+    cursor: pointer;
+}
+
+.radio.active {
+    background: #270b3e;
+    border: 2px solid #270b3e;
+    color: #ffffff;
 }

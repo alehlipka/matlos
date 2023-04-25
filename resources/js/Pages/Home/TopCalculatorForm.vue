@@ -6,13 +6,19 @@ import backgroundTopUrl from "@/../img/top-calculator-form/background-top.png";
 import backgroundPeoplesUrl from "@/../img/top-calculator-form/background-peoples.png";
 import backgroundCircleUrl from "@/../img/top-calculator-form/background-circle.png";
 
-import PrimaryButton from '@/Components/PrimaryButton.vue';
-
 const form = reactive({
     name: null,
     birthday: null,
-    gender: '',
+    gender: 'female',
 });
+
+function setGender(gender) {
+    form.gender = gender;
+}
+
+function submitCalculator() {
+    router.post('/calc', form);
+}
 
 </script>
 
@@ -24,17 +30,23 @@ const form = reactive({
                 twojej daty urodzenia. Ten kalkulator jest darmowy, natomiast jeżeli będziesz chciał się
                 dowiedzieć czegoś więcej (wszystkie interpretacje każdego arkanu TWOJEJ indywidualnej Matrycy w
                 formacie PDF) przejdź do naszych taryfów.</div>
-            <div class="offset"><input placeholder="IMIE" class="calc-btn input gt2bt" type="text"></div>
-            <div class="offset"><input placeholder="DATA URODZENIA" class="calc-btn input gt2bt" type="date"></div>
-            <div class="offset"><button class="calc-btn button o2b">WYLICZ</button></div>
-            <div class="offset"><button class="calc-btn button o2b">WYLICZ</button></div>
-            <!-- <div class="offset"><button class="calc-btn button b2o">WYLICZ</button></div> -->
-            <!-- <div class="offset"><button class="calc-btn button g2o">WYLICZ</button></div> -->
-            <!-- <div class="offset"><button class="calc-btn button w2g">WYLICZ</button></div> -->
-            <!-- <div class="offset"><button class="calc-btn button bt2b">WYLICZ</button></div> -->
-            <!-- <div class="offset"><button class="calc-btn button gt2b">WYLICZ</button></div> -->
-            <!-- <div class="offset"><button class="calc-btn button gt2o">WYLICZ</button></div> -->
+            <div class="offset">
+                <input placeholder="IMIE" class="name input gt2bt" type="text">
+            </div>
+            <div class="offset">
+                <input placeholder="DATA URODZENIA" class="birthday input gt2bt" type="date">
+            </div>
+            <div class="offset" style="display: flex; justify-content: space-between;">
+                <button @click="setGender('female')" class="gender radio"
+                    :class="{ active: form.gender == 'female' }">KOBIETA</button>
+                <button @click="setGender('male')" class="gender radio"
+                    :class="{ active: form.gender == 'male' }">MEZCZYZNA</button>
+            </div>
+            <div class="offset">
+                <button @click="submitCalculator" class="submit button o2b">WYLICZ</button>
+            </div>
         </div>
+
         <div class="bottoms">
             <div class="peoples" :style="{ 'background-image': `url(${backgroundPeoplesUrl})` }"></div>
             <div class="right-circle" :style="{ 'background-image': `url(${backgroundCircleUrl})` }"></div>
@@ -46,7 +58,18 @@ const form = reactive({
 .offset {
     margin-top: 10px;
 }
-.calc-btn {
+
+.name,
+.birthday {
+    padding: 14px;
+    width: calc(100% - 32px);
+}
+
+.gender {
+    width: 49%;
+}
+
+.submit {
     font-weight: bold;
     width: 100%;
     font-size: 20px;
