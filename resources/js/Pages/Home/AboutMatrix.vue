@@ -28,5 +28,6 @@
 <style scoped>
 .point {
     margin-bottom: 25px;
+    font-size: 24px;
 }
 </style>

@@ -17,7 +17,7 @@ function setGender(gender) {
 }
 
 function submitCalculator() {
-    router.post('/calc', form);
+    router.post('/calculate', form);
 }
 
 </script>
@@ -31,10 +31,10 @@ function submitCalculator() {
                 dowiedzieć czegoś więcej (wszystkie interpretacje każdego arkanu TWOJEJ indywidualnej Matrycy w
                 formacie PDF) przejdź do naszych taryfów.</div>
             <div class="offset">
-                <input placeholder="IMIE" class="name input gt2bt" type="text">
+                <input v-model="form.name" placeholder="IMIE" class="name input gt2bt" :class="{error: $page.props.errors.name}" type="text">
             </div>
             <div class="offset">
-                <input placeholder="DATA URODZENIA" class="birthday input gt2bt" type="date">
+                <input v-model="form.birthday" placeholder="DATA URODZENIA" class="birthday input gt2bt" :class="{error: $page.props.errors.birthday}" type="date">
             </div>
             <div class="offset" style="display: flex; justify-content: space-between;">
                 <button @click="setGender('female')" class="gender radio"

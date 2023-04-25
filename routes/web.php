@@ -17,7 +17,8 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::post('/calculate', [HomeController::class, 'calculate']);
 
 //
 //Route::get('/dashboard', function () {

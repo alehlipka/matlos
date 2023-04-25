@@ -6,6 +6,10 @@
     cursor: pointer;
 }
 
+.input.error {
+    border: 4px solid #ff0000 !important;
+}
+
 .input.gt2bt {
     border: 2px solid #cccccc;
     color: #cccccc;

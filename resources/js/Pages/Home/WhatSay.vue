@@ -63,13 +63,13 @@ import point_1 from "@/../img/what-say/point_1.png";
 .point-container {
     display: flex;
     flex-direction: column;
-    margin-bottom: 25px;
+    margin-bottom: 45px;
 }
 
 .point-container .point-container-title {
     font-weight: bold;
     font-size: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .point-container .point-container-description {
