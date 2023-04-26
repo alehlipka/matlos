@@ -1,12 +1,17 @@
 <script setup>
-
+import price1 from "@/../img/price/price_1.png";
+import price2 from "@/../img/price/price_2.png";
+import price3 from "@/../img/price/price_3.png";
 </script>
 
 <template>
     <div class="page" id="buy">
         <div class="page-box">
             <div class="box-description holder">
-                <div class="price-block">
+                <img :src="price1">
+                <img style="margin: 0 20px;" :src="price2">
+                <img :src="price3">
+                <!-- <div class="price-block">
                     <div class="price-title">Dla dwojga</div>
                     <div class="price-description">
                         Przy zakupie otrzymasz:<br>
@@ -25,9 +30,9 @@
                         </div>
                     </div>
                     <div class="price-buy"></div>
-                </div>
+                </div> -->
 
-                <div class="price-block top">
+                <!-- <div class="price-block top">
                     <div class="price-title">Wszystko dla siebie</div>
                     <div class="price-description">
                         Przy zakupie otrzymasz:<br>
@@ -46,9 +51,9 @@
                         </div>
                     </div>
                     <div class="price-buy"></div>
-                </div>
+                </div> -->
 
-                <div class="price-block">
+                <!-- <div class="price-block">
                     <div class="price-title">Dla rodziny</div>
                     <div class="price-description">
                         Przy zakupie otrzymasz:<br>
@@ -66,7 +71,7 @@
                         </div>
                     </div>
                     <div class="price-buy"></div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
