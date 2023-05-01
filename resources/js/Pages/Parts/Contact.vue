@@ -6,10 +6,12 @@ const form = reactive({
     name: null,
     email: null,
     text: null,
+    isSubmited: false
 });
 
 function submitForm() {
-    router.post('/contact-save', form);
+    router.post('/contact/save', form);
+    form.isSubmited = true;
 }
 </script>
 
@@ -17,7 +19,7 @@ function submitForm() {
     <div class="page">
         <div class="page-box">
             <div class="box-title">KONTAKT</div>
-            <div class="box-description">
+            <div v-if="!form.isSubmited" class="box-description">
                 <div class="form">
                     <p style="font-size: 18px;">Aby do nas napisać, wypełnij poniższy formularz. </p>
                     <p>
@@ -29,16 +31,16 @@ function submitForm() {
                             :class="{ error: $page.props.errors.email }" type="email">
                     </p>
                     <p>
-                        <textarea v-model="form.name" placeholder="Wiadomość" class="name input gt2bt"
+                        <textarea v-model="form.text" placeholder="Wiadomość" class="name input gt2bt"
                             :class="{ error: $page.props.errors.name }" cols="30" rows="10"></textarea>
                     </p>
                     <p>
-                        <button class="submit button b2o">Wysłać</button>
+                        <button @click="submitForm" class="submit button b2o">Wysłać</button>
                     </p>
                 </div>
             </div>
 
-            <div class="box-description">
+            <div v-else class="box-description">
                 <div class="form">
                     <p style="font-size: 18px; text-align: center;">
                         Dziękujemy za skorzystanie z naszego formularza kontaktowego! Twoja

@@ -10,7 +10,7 @@ class ContactSaveRequest extends FormRequest
     {
         return [
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'date'],
+            'email' => ['required', 'email'],
             'text' => ['required', 'string', 'max:500'],
         ];
     }
