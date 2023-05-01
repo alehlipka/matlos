@@ -85,13 +85,13 @@ function submitCalculator() {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 500px;
+    width: 550px;
     transform: translate(-50%, -50%);
     z-index: 2;
 }
 
 .calculator-form .title {
-    font-size: 19px;
+    font-size: 23px;
     font-weight: bold;
     text-align: justify;
 }
@@ -103,7 +103,7 @@ function submitCalculator() {
 }
 
 .calculator-form .description {
-    font-size: 14px;
+    font-size: 16px;
     text-align: justify;
 }
 
