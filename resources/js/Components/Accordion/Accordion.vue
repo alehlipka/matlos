@@ -7,6 +7,7 @@ import lockUrl from "@/../img/accordion/lock.png";
 
 defineProps({
   isBlocked: { type: Boolean, required: false, default: false },
+  isDark: { type: Boolean, required: false, default: false },
   title: { type: String, required: true },
   description: { type: String, required: false, default: "" }
 })
@@ -20,7 +21,7 @@ function triggered() {
 
 <template>
     <div class="accordion">
-        <div class="item" :class="{open: trigger.show}">
+        <div class="item" :class="{open: trigger.show, dark: isDark}">
             <div class="header">
                 <div class="title">{{ title }}</div>
                 <div class="trigger">
@@ -50,25 +51,34 @@ function triggered() {
     align-items: center;
     justify-content: space-between;
     background: #f4f4f4;
-    border-radius: 20px;
+    border-radius: 30px;
     font-size: 16px;
     font-weight: bold;
-    padding: 10px 20px;
+    padding: 16px 20px;
+    color: #190326;
+}
+
+.dark .header {
+    background: #eaeaea;
 }
 
 .open .header {
-    border-radius: 20px 20px 0 0;
+    border-radius: 28px 28px 0 0;
 }
 
 .content {
     background: #f4f4f4;
-    border-radius: 20px;
+    border-radius: 28px;
     font-size: 18px;
     padding: 20px 30px;
 }
 
+.dark .content {
+    background: #eaeaea;
+}
+
 .open .content {
-    border-radius: 0 0 20px 20px;
+    border-radius: 0 0 28px 28px;
 }
 
 .trigger {
