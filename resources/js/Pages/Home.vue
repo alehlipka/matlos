@@ -1,16 +1,16 @@
 <script setup>
 import { Head } from '@inertiajs/vue3';
 import TopNavigation from "@/Components/TopNavigation.vue";
-import TopCalculatorForm from "@/Pages/Home/Parts/TopCalculatorForm.vue";
-import MatrixMap from "@/Pages/Home/Parts/MatrixMap.vue";
-import MatrixDemoResult from "@/Pages/Home/Parts/MatrixDemoResult.vue";
-import AboutMatrix from "@/Pages/Home/Parts/AboutMatrix.vue";
-import NeedIf from "@/Pages/Home/Parts/NeedIf.vue";
-import WhatSay from "@/Pages/Home/Parts/WhatSay.vue";
-import Price from "@/Pages/Home/Parts/Price.vue";
-import Social from "@/Pages/Home/Parts/Social.vue";
-import TwoWays from "@/Pages/Home/Parts/TwoWays.vue";
-import Footer from "@/Pages/Home/Parts/Footer.vue";
+import TopCalculatorForm from "@/Pages/Parts/TopCalculatorForm.vue";
+import MatrixMap from "@/Pages/Parts/MatrixMap.vue";
+import MatrixDemoResult from "@/Pages/Parts/MatrixDemoResult.vue";
+import AboutMatrix from "@/Pages/Parts/AboutMatrix.vue";
+import NeedIf from "@/Pages/Parts/NeedIf.vue";
+import WhatSay from "@/Pages/Parts/WhatSay.vue";
+import Price from "@/Pages/Parts/Price.vue";
+import Social from "@/Pages/Parts/Social.vue";
+import TwoWays from "@/Pages/Parts/TwoWays.vue";
+import Footer from "@/Pages/Parts/Footer.vue";
 
 const windowHeight = window.innerHeight + "px";
 const windowWidth = Math.min(1300, window.innerWidth) + "px";

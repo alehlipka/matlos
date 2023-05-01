@@ -12,12 +12,12 @@ class HomeController extends Controller
 {
     public function index(Request $request): Response
     {
-        return Inertia::render('Home/Index');
+        return Inertia::render('Home');
     }
 
     public function faq(Request $request): Response
     {
-        return Inertia::render('Home/Faq');
+        return Inertia::render('Faq');
     }
 
     public function calculate(CalculateRequest $request): RedirectResponse
