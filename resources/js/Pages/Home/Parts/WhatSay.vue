@@ -10,7 +10,7 @@ import point_1 from "@/../img/what-say/point_1.png";
                 <div class="point-container">
                     <div class="point-container-title">Finanse</div>
                     <div class="point-container-description">
-                        <img :src="point_1">
+                        <img class="point one" :src="point_1">
                         Co blokuje Twoje finanse, co najlepiej
                         zrobić, aby osiągnąć finansowy sukces i dobrobyt, na jakie zawody zwrócić uwagę, jak
                         odblokować swój potencjał finansowy.
@@ -20,7 +20,7 @@ import point_1 from "@/../img/what-say/point_1.png";
                 <div class="point-container">
                     <div class="point-container-title">Prognoza na lata</div>
                     <div class="point-container-description">
-                        <img :src="point_1">
+                        <img class="point two" :src="point_1">
                         Osobista prognoza energetyczna na lata
                         Twojego życia. Jaka energia będzie Ci towarzyszyć, co Cię czeka i na co zwrócić uwagę w
                         danym okresie życia.
@@ -30,7 +30,7 @@ import point_1 from "@/../img/what-say/point_1.png";
                 <div class="point-container">
                     <div class="point-container-title">Zdrowie</div>
                     <div class="point-container-description">
-                        <img :src="point_1">
+                        <img class="point three" :src="point_1">
                         Mapa zdrowia z opisem każdej czakry i
                         rozszyfrowaniem energii na czakrach. Czym są problemy zdrowotne i jak ich można uniknąć.
                     </div>
@@ -39,7 +39,7 @@ import point_1 from "@/../img/what-say/point_1.png";
                 <div class="point-container">
                     <div class="point-container-title">Relacje i miłość</div>
                     <div class="point-container-description">
-                        <img :src="point_1">
+                        <img class="point four" :src="point_1">
                         Zadania pary, mocne i słabe strony Waszej
                         pary, seksualność, jak stworzyć harmonijny związek, a także potencjał finansowy pary.
                     </div>
@@ -48,7 +48,7 @@ import point_1 from "@/../img/what-say/point_1.png";
                 <div class="point-container">
                     <div class="point-container-title">Zadania i długi karmiczne</div>
                     <div class="point-container-description">
-                        <img :src="point_1">
+                        <img class="point five" :src="point_1">
                         Karmiczne ogony z poprzedniego życia, które
                         należy rozwiązać i zadania duszy w obecnym wcieleniu. Rozwiązując je, pozytywne zmiany
                         natychmiast rozpoczną się w Twoim życiu.
@@ -66,6 +66,22 @@ import point_1 from "@/../img/what-say/point_1.png";
     margin-bottom: 45px;
 }
 
+.point.one {
+    animation: rotation 800ms infinite linear;
+}
+.point.two {
+    animation: rotation 2000ms infinite linear;
+}
+.point.three {
+    animation: rotation 1200ms infinite linear;
+}
+.point.four {
+    animation: rotation 1000ms infinite linear;
+}
+.point.five {
+    animation: rotation 1500ms infinite linear;
+}
+
 .point-container .point-container-title {
     font-weight: bold;
     font-size: 24px;
@@ -79,5 +95,14 @@ import point_1 from "@/../img/what-say/point_1.png";
 
 .point-container .point-container-description img {
     margin-right: 20px;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 </style>
