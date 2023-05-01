@@ -17,7 +17,7 @@ const windowWidth = Math.min(1300, window.innerWidth) + "px";
 </script>
 
 <template>
-    <Head title="Home" />
+    <Head title="Główna" />
 
     <div class="container">
         <div class="content">

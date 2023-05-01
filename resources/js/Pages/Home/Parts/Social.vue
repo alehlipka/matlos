@@ -5,7 +5,7 @@ import tiktokUrl from "@/../img/social/tiktok.png";
 </script>
 
 <template>
-    <div class="page">
+    <div class="page" id="social">
         <div class="page-box">
             <div class="box-description" id="social-background" :style="{ 'background-image': `url(${backgroundUrl})` }">
                 <div class="inside">
@@ -97,6 +97,4 @@ import tiktokUrl from "@/../img/social/tiktok.png";
     min-height: 100%;
     width: 100%;
 }
-
-.box-description {}
 </style>
