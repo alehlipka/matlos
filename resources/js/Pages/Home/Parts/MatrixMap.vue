@@ -103,6 +103,7 @@ import dotsThreeUrl from "@/../img/matrix-map/dots-three.png";
                 </div>
                 <div class="center">
                     <img :src="matrixUrl">
+                    <p><a class="button b2o" style="margin-top: 80px;" href="#">POBIERZ MATRYCE</a></p>
                 </div>
                 <div class="right">
                     <div class="line">
@@ -165,6 +166,13 @@ import dotsThreeUrl from "@/../img/matrix-map/dots-three.png";
 </template>
 
 <style scoped>
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .line {
     display: flex;
     width: 400px;
