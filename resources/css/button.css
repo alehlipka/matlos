@@ -5,11 +5,14 @@
     border: none;
     color: #ffffff;
     cursor: pointer;
+    white-space: nowrap;
+    display: inline-block;
 }
 
 .button.o2b {
     background: linear-gradient(to right, orange 40%, red);
 }
+
 .button.o2b:active {
     background: #270b3e;
 }
@@ -17,6 +20,7 @@
 .button.b2o {
     background: #270b3e;
 }
+
 .button.b2o:active {
     background: linear-gradient(to right, orange 40%, red);
 }
@@ -24,6 +28,7 @@
 .button.g2o {
     background: #cccccc;
 }
+
 .button.g2o:active {
     background: linear-gradient(to right, orange 40%, red);
 }
@@ -32,6 +37,7 @@
     background: #ffffff;
     color: #cccccc;
 }
+
 .button.w2g:active {
     background: #cccccc;
     color: #ffffff;
@@ -42,6 +48,7 @@
     border: 2px solid #270b3e;
     color: #270b3e;
 }
+
 .button.bt2b:active {
     background: #270b3e;
     color: #ffffff;
@@ -52,6 +59,7 @@
     border: 2px solid #cccccc;
     color: #cccccc;
 }
+
 .button.gt2b:active {
     background: #270b3e;
     border: 2px solid #270b3e;
@@ -63,8 +71,21 @@
     border: 2px solid #cccccc;
     color: #cccccc;
 }
+
 .button.gt2o:active {
     background: linear-gradient(to right, orange 40%, red);
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+.button.social {
+    background: #ffffff;
+    border: 2px solid #cccccc;
+    color: #000000;
+}
+
+.button.social:hover {
+    background: #cccccc;
     border: 2px solid #ffffff;
     color: #ffffff;
 }
