@@ -24,7 +24,7 @@ import { Link } from '@inertiajs/vue3'
                 </div>
                 <div class="left-links">
                     <Link class="l-link" href="/faq">FAQ</Link>
-                    <a class="l-link" href="#">Kontakt</a>
+                    <a class="l-link" href="/contact">Kontakt</a>
                     <a class="l-link" href="#">Regulamin</a>
                     <a class="l-link" href="#">Polityka prywatności</a>
                 </div>

@@ -17,7 +17,7 @@ function setGender(gender) {
 }
 
 function submitCalculator() {
-    router.post('/calculate', form);
+    router.post('/contact/save', form);
 }
 
 </script>

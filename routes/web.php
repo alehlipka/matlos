@@ -19,6 +19,10 @@ use Inertia\Inertia;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
+
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+Route::post('/contact/save', [HomeController::class, 'contactSave'])->name('contact-save');
+
 Route::post('/calculate', [HomeController::class, 'calculate']);
 
 //
