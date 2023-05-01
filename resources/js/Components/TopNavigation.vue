@@ -5,7 +5,11 @@ import { reactive, onMounted, onBeforeUnmount } from 'vue';
 import logoLightUrl from "@/../img/top-navigation/logo-light.png";
 import logoDarkUrl from "@/../img/top-navigation/logo-dark.png";
 
-const logo = reactive({ url: logoLightUrl, filled: false });
+const props = defineProps({
+  dynamic: { type: Boolean, required: false, default: true },
+});
+
+const logo = reactive({ url: logoDarkUrl, filled: true });
 
 const debounce = (callback, wait) => {
     let timeoutId = null;
@@ -24,17 +28,22 @@ const handleScroll = debounce((event) => {
 }, 10);
 
 onMounted(() => {
-    window.addEventListener('scroll', handleScroll);
+    if (props.dynamic) {
+        handleScroll();
+        window.addEventListener('scroll', handleScroll);
+    }
 });
 
 onBeforeUnmount(() => {
-    window.removeEventListener('scroll', handleScroll);
+    if (props.dynamic) {
+        window.removeEventListener('scroll', handleScroll);
+    }
 });
 
 </script>
 
 <template>
-    <div class="navigation">
+    <div class="navigation" :class="{sticky: !props.dynamic}">
         <div class="logo">
             <img :src="logo.url">
         </div>
@@ -57,6 +66,9 @@ onBeforeUnmount(() => {
     display: flex;
     margin-top: 45px;
     z-index: 10;
+}
+.navigation.sticky {
+    position: sticky;
 }
 
 .navigation .logo {

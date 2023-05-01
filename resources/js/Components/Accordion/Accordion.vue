@@ -10,7 +10,7 @@ defineProps({
   isDark: { type: Boolean, required: false, default: false },
   title: { type: String, required: true },
   description: { type: String, required: false, default: "" }
-})
+});
 
 const trigger = reactive({ show: false });
 

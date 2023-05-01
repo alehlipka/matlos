@@ -15,6 +15,11 @@ class HomeController extends Controller
         return Inertia::render('Home/Index');
     }
 
+    public function faq(Request $request): Response
+    {
+        return Inertia::render('Home/Faq');
+    }
+
     public function calculate(CalculateRequest $request): RedirectResponse
     {
         return to_route('home');

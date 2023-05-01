@@ -5,6 +5,8 @@ import backgroundUrl from "@/../img/footer/background.png";
 import tiktokUrl from "@/../img/footer/tiktok.png";
 import instagramUrl from "@/../img/footer/instagram.png";
 import facebookUrl from "@/../img/footer/facebook.png";
+
+import { Link } from '@inertiajs/vue3'
 </script>
 
 <template>
@@ -21,17 +23,17 @@ import facebookUrl from "@/../img/footer/facebook.png";
                     </p>
                 </div>
                 <div class="left-links">
-                    <a class="l-link" href="#">FAQ</a>
+                    <Link class="l-link" href="/faq">FAQ</Link>
                     <a class="l-link" href="#">Kontakt</a>
                     <a class="l-link" href="#">Regulamin</a>
                     <a class="l-link" href="#">Polityka prywatności</a>
                 </div>
             </div>
             <div class="footainer right">
-                <a class="l-link button o2b calc" href="#">Wylicz Matryce</a>
-                <a class="l-link" href="#">Kalkulator</a>
-                <a class="l-link" href="#">O metodzie</a>
-                <a class="l-link" href="#">Wybierz pakiet</a>
+                <a class="l-link button o2b calc" href="/">Wylicz Matryce</a>
+                <a class="l-link" href="/">Kalkulator</a>
+                <a class="l-link" href="/#about-matrix">O metodzie</a>
+                <a class="l-link" href="/#buy">Wybierz pakiet</a>
                 <a class="l-link" href="#">Czym jest Matryca Losu?</a>
             </div>
         </div>
