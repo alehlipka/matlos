@@ -4,7 +4,7 @@ import iconUrl from "@/../img/footer/logo.png";
 import backgroundUrl from "@/../img/footer/background.png";
 import tiktokUrl from "@/../img/footer/tiktok.png";
 import instagramUrl from "@/../img/footer/instagram.png";
-import facebookUrl from "@/../img/footer/instagram.png";
+import facebookUrl from "@/../img/footer/facebook.png";
 </script>
 
 <template>
@@ -16,7 +16,7 @@ import facebookUrl from "@/../img/footer/instagram.png";
                     <p style="margin: 10px 0;"><a class="link" href="/">matrycalosu.pl</a></p>
                     <p>
                         <a href="#"><img :src="tiktokUrl"></a>
-                        <a href="#"><img :src="instagramUrl"></a>
+                        <a href="#"><img style="margin: 0 2px;" :src="instagramUrl"></a>
                         <a href="#"><img :src="facebookUrl"></a>
                     </p>
                 </div>
