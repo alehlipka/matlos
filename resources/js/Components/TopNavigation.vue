@@ -45,7 +45,7 @@ onBeforeUnmount(() => {
 <template>
     <div class="navigation" :class="{sticky: !props.dynamic}">
         <div class="logo">
-            <img :src="logo.url">
+            <Link href="/"><img :src="logo.url"></Link>
         </div>
         <div class="links">
             <div class="group" :class="{fill: logo.filled}">
