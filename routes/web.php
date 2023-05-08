@@ -3,6 +3,7 @@
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PaymentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,6 +27,10 @@ Route::prefix('contact')->group(function () {
 
 Route::prefix('faq')->group(function () {
     Route::get('/', [FaqController::class, 'index'])->name('faq.index');
+});
+
+Route::prefix('payment')->group(function () {
+    Route::get('/', [PaymentController::class, 'index'])->name('payment.index');
 });
 
 //

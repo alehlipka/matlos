@@ -1,8 +1,8 @@
 <script setup>
 import { Head } from '@inertiajs/vue3';
 import TopNavigation from "@/Components/TopNavigation.vue";
-import Faq from "@/Pages/Parts/Faq.vue";
-import Footer from "@/Pages/Parts/Footer.vue";
+import Faq from "@/Pages/Faq/Faq.vue";
+import Footer from "@/Components/Footer.vue";
 
 const windowHeight = window.innerHeight + "px";
 const windowWidth = Math.min(1300, window.innerWidth) + "px";

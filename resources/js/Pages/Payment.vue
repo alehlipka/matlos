@@ -1,7 +1,7 @@
 <script setup>
 import { Head } from '@inertiajs/vue3';
 import TopNavigation from "@/Components/TopNavigation.vue";
-import Contact from "@/Pages/Contact/Contact.vue";
+import PaymentStart from "@/Pages/Payment/PaymentStart.vue";
 import Footer from "@/Components/Footer.vue";
 
 const windowHeight = window.innerHeight + "px";
@@ -9,12 +9,12 @@ const windowWidth = Math.min(1300, window.innerWidth) + "px";
 </script>
 
 <template>
-    <Head title="Kontakt" />
+    <Head title="Zamówienie" />
 
     <div class="container">
         <div class="content">
             <TopNavigation :dynamic="false" />
-            <Contact />
+            <PaymentStart />
             <Footer />
         </div>
     </div>
