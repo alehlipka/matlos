@@ -8,9 +8,9 @@ import price3 from "@/../img/price/price_3.png";
     <div class="page" id="buy">
         <div class="page-box">
             <div class="box-description holder">
-                <img :src="price1">
-                <img style="margin: 0 20px;" :src="price2">
-                <img :src="price3">
+                <a href="/payment"><img :src="price1"></a>
+                <a href="/payment"><img style="margin: 0 20px;" :src="price2"></a>
+                <a href="/payment"><img :src="price3"></a>
             </div>
         </div>
     </div>

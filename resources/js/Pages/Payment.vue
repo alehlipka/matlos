@@ -41,14 +41,14 @@ const windowWidth = Math.min(1300, window.innerWidth) + "px";
 }
 
 .page-box {
-    padding: 150px 0 20px 40px;
+    padding: 50px 0 0 40px;
 }
 
 .page-box .box-title {
     font-weight: bold;
     font-size: 50px;
-    text-align: center;
-    margin-bottom: 50px;
+    text-align: left;
+    margin: 0 0 20px 0;
 }
 
 .page-box .box-description {
