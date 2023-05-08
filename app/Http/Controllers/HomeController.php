@@ -15,7 +15,16 @@ class HomeController extends Controller
 {
     public function index(Request $request): Response
     {
-        return Inertia::render('Home');
+        $data = [
+            'calculated' => $request->session()->get('status', false)
+        ];
+
+        return Inertia::render('Home', $data);
+    }
+
+    public function calculate(CalculateRequest $request): RedirectResponse
+    {
+        return redirect()->back()->with(['status' => true]);
     }
 
     public function faq(Request $request): Response
@@ -44,10 +53,5 @@ class HomeController extends Controller
         $contact = Contact::create($data);
 
         return to_route('contact')->with(['status' => isset($contact)]);
-    }
-
-    public function calculate(CalculateRequest $request): RedirectResponse
-    {
-        return to_route('home');
     }
 }

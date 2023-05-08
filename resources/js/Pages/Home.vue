@@ -24,8 +24,8 @@ const windowWidth = Math.min(1300, window.innerWidth) + "px";
             <TopNavigation />
 
             <TopCalculatorForm />
-            <MatrixMap />
-            <MatrixDemoResult />
+            <MatrixMap v-if="$page.props.calculated" />
+            <MatrixDemoResult v-if="$page.props.calculated" />
             <AboutMatrix />
             <NeedIf />
             <WhatSay />

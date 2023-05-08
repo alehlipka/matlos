@@ -1,6 +1,8 @@
 <script setup>
 import { reactive } from 'vue';
 import { router } from '@inertiajs/vue3';
+import { watchEffect } from 'vue';
+import { usePage } from '@inertiajs/vue3';
 
 import backgroundTopUrl from "@/../img/top-calculator-form/background-top.png";
 import backgroundPeoplesUrl from "@/../img/top-calculator-form/background-peoples.png";
@@ -10,6 +12,14 @@ const form = reactive({
     name: null,
     birthday: null,
     gender: 'female',
+});
+
+watchEffect(() => {
+    const page = usePage();
+
+    if (page.props.calculated) {
+        window.location.hash = '#matrix-map';
+    }
 });
 
 function setGender(gender) {
