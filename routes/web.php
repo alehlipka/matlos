@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AccountController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\HomeController;
@@ -31,6 +32,10 @@ Route::prefix('faq')->group(function () {
 
 Route::prefix('payment')->group(function () {
     Route::get('/', [PaymentController::class, 'index'])->name('payment.index');
+});
+
+Route::prefix('account')->group(function () {
+    Route::get('/', [AccountController::class, 'index'])->name('account.index');
 });
 
 //

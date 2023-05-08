@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\Home\CalculateRequest;
 use App\Http\Requests\Home\ContactSaveRequest;
 use App\Models\Contact;
 use Illuminate\Http\Request;
@@ -18,6 +17,7 @@ class ContactController extends Controller
         $data = [
             'saved' => $request->session()->get('status', false)
         ];
+        
         return Inertia::render('Contact', $data);
     }
 
