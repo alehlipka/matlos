@@ -26,32 +26,4 @@ class HomeController extends Controller
     {
         return redirect()->back()->with(['status' => true]);
     }
-
-    public function faq(Request $request): Response
-    {
-        return Inertia::render('Faq');
-    }
-
-    public function contact(Request $request): Response
-    {
-        $data = [
-            'saved' => $request->session()->get('status', false)
-        ];
-        return Inertia::render('Contact', $data);
-    }
-
-    public function contactSave(ContactSaveRequest $request): RedirectResponse
-    {
-        $data = [
-            'name' => $request->name,
-            'email' => $request->email,
-            'text' => $request->text,
-            'user_id' => Auth::id(),
-            'is_sended' => false,
-        ];
-
-        $contact = Contact::create($data);
-
-        return to_route('contact')->with(['status' => isset($contact)]);
-    }
 }

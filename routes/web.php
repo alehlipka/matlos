@@ -1,10 +1,9 @@
 <?php
 
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\FaqController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ProfileController;
-use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,13 +16,17 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
+Route::get('/', [HomeController::class, 'index'])->name('home.index');
+Route::post('/calculate', [HomeController::class, 'home.calculate']);
 
-Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
-Route::post('/contact/save', [HomeController::class, 'contactSave'])->name('contact-save');
+Route::prefix('contact')->group(function () {
+    Route::get('/', [ContactController::class, 'index'])->name('contact.index');
+    Route::post('save', [ContactController::class, 'save'])->name('contact.save');
+});
 
-Route::post('/calculate', [HomeController::class, 'calculate']);
+Route::prefix('faq')->group(function () {
+    Route::get('/', [FaqController::class, 'index'])->name('faq.index');
+});
 
 //
 //Route::get('/dashboard', function () {
