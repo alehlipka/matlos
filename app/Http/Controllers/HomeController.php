@@ -7,10 +7,8 @@ use App\Http\Requests\Home\ContactSaveRequest;
 use App\Models\Contact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Mail;
 use Inertia\Inertia;
 use Inertia\Response;
-use Redirect;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class HomeController extends Controller
@@ -27,7 +25,10 @@ class HomeController extends Controller
 
     public function contact(Request $request): Response
     {
-        return Inertia::render('Contact');
+        $data = [
+            'saved' => $request->session()->get('status', false)
+        ];
+        return Inertia::render('Contact', $data);
     }
 
     public function contactSave(ContactSaveRequest $request): RedirectResponse
@@ -39,10 +40,10 @@ class HomeController extends Controller
             'user_id' => Auth::id(),
             'is_sended' => false,
         ];
-        Contact::create($data);
-        // $isSended = Mail::to('info@matrycalosu.local')->send('test');
 
-        return redirect()->back()->with(['isSended' => true]);
+        $contact = Contact::create($data);
+
+        return to_route('contact')->with(['status' => isset($contact)]);
     }
 
     public function calculate(CalculateRequest $request): RedirectResponse

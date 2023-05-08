@@ -6,12 +6,10 @@ const form = reactive({
     name: null,
     email: null,
     text: null,
-    isSubmited: false
 });
 
 function submitForm() {
     router.post('/contact/save', form);
-    form.isSubmited = true;
 }
 </script>
 
@@ -19,9 +17,10 @@ function submitForm() {
     <div class="page">
         <div class="page-box">
             <div class="box-title">KONTAKT</div>
-            <div v-if="!form.isSubmited" class="box-description">
+
+            <div v-if="!$page.props.saved" class="box-description">
                 <div class="form">
-                    <p style="font-size: 18px;">Aby do nas napisać, wypełnij poniższy formularz. </p>
+                    <p style="font-size: 18px;">Aby do nas napisać, wypełnij poniższy formularz. {{ $page.props.flash.message }}</p>
                     <p>
                         <input v-model="form.name" placeholder="IMIE" class="name input gt2bt"
                             :class="{ error: $page.props.errors.name }" type="text">
@@ -32,7 +31,7 @@ function submitForm() {
                     </p>
                     <p>
                         <textarea v-model="form.text" placeholder="Wiadomość" class="name input gt2bt"
-                            :class="{ error: $page.props.errors.name }" cols="30" rows="10"></textarea>
+                            :class="{ error: $page.props.errors.text }" cols="30" rows="10"></textarea>
                     </p>
                     <p>
                         <button @click="submitForm" class="submit button b2o">Wysłać</button>
