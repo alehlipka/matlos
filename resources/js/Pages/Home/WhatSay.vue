@@ -67,19 +67,19 @@ import point_1 from "@/../img/what-say/point_1.png";
 }
 
 .point.one {
-    animation: rotation 800ms infinite linear;
+    animation: rotation 1800ms infinite linear;
 }
 .point.two {
-    animation: rotation 2000ms infinite linear;
+    animation: rotation 4000ms infinite linear;
 }
 .point.three {
-    animation: rotation 1200ms infinite linear;
+    animation: rotation 2400ms infinite linear;
 }
 .point.four {
-    animation: rotation 1000ms infinite linear;
+    animation: rotation 2000ms infinite linear;
 }
 .point.five {
-    animation: rotation 1500ms infinite linear;
+    animation: rotation 3000ms infinite linear;
 }
 
 .point-container .point-container-title {
