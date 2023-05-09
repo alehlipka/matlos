@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
-Route::post('/calculate', [HomeController::class, 'home.calculate']);
+Route::post('/calculate', [HomeController::class, 'calculate'])->name('home.calculate');
 
 Route::prefix('contact')->group(function () {
     Route::get('/', [ContactController::class, 'index'])->name('contact.index');
